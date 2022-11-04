@@ -1,0 +1,211 @@
+{
+  "keywordFileContentHash": "9293E69CA55E3E23C3D94E28E5E6318C",
+  "keywordClasses": [
+    {
+      "name": "com.kms.EmployeePage",
+      "keywordMethods": [
+        {
+          "name": "accessSubPageMenuItem",
+          "parameters": [
+            {
+              "name": "subPageMenuItemName",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "subPageSubMenuItemName",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\n\t * accessSubPageMenuItem\n\t */"
+        },
+        {
+          "name": "accessSubPageMenuItemSuccessful",
+          "parameters": [
+            {
+              "name": "subPageMenuItemName",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "subPageSubMenuItemName",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\n\t * accessSubPageMenuItemSuccessful\n\t */"
+        },
+        {
+          "name": "insertToCSVFile",
+          "parameters": [
+            {
+              "name": "csvFile",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.io.File",
+                "unresolvedClassName": "File",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\n\t * insertToCSVFile\n\t */"
+        },
+        {
+          "name": "browseFile",
+          "parameters": [],
+          "javadoc": "/**\n\t * insertToCSVFile\n\t */"
+        },
+        {
+          "name": "verifyNewEmployee",
+          "parameters": [
+            {
+              "name": "strFullName",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "",
+                "unresolvedClassName": "",
+                "isArray": true,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "componentType": {
+                  "fullClassName": "java.lang.String",
+                  "unresolvedClassName": "String",
+                  "isArray": false,
+                  "isGnericsPlaceHolder": false,
+                  "hasImmutableClassName": false,
+                  "genericsTypes": [],
+                  "errorOnParsing": false
+                },
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\n\t * verifyNewEmployee\n\t */"
+        },
+        {
+          "name": "deleteNewEmployee",
+          "parameters": [
+            {
+              "name": "strFullName",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "",
+                "unresolvedClassName": "",
+                "isArray": true,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "componentType": {
+                  "fullClassName": "java.lang.String",
+                  "unresolvedClassName": "String",
+                  "isArray": false,
+                  "isGnericsPlaceHolder": false,
+                  "hasImmutableClassName": false,
+                  "genericsTypes": [],
+                  "errorOnParsing": false
+                },
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\n\t\t * verifyNewEmployee\n\t\t */"
+        },
+        {
+          "name": "refreshBrowser",
+          "parameters": [],
+          "javadoc": "/**\n\t\t * Refresh browser\n\t\t */"
+        },
+        {
+          "name": "clickElement",
+          "parameters": [
+            {
+              "name": "to",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "com.kms.katalon.core.testobject.TestObject",
+                "unresolvedClassName": "TestObject",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\n\t\t * Click element\n\t\t * @param to Katalon test object\n\t\t */"
+        },
+        {
+          "name": "getHtmlTableRows",
+          "parameters": [
+            {
+              "name": "table",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "com.kms.katalon.core.testobject.TestObject",
+                "unresolvedClassName": "TestObject",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            },
+            {
+              "name": "outerTagName",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": "/**\n\t\t * Get all rows of HTML table\n\t\t * @param table Katalon test object represent for HTML table\n\t\t * @param outerTagName outer tag name of TR tag, usually is TBODY\n\t\t * @return All rows inside HTML table\n\t\t */"
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

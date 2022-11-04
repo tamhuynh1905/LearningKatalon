@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>PIM-02-Notification_Verify No Records Found</name>
+   <tag>Week2, Regression</tag>
+   <comment></comment>
+   <testCaseGuid>599578c3-fd96-4678-bb4f-6bba9046af46</testCaseGuid>
+</TestCaseEntity>

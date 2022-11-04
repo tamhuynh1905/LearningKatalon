@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "5C861DD646973E1C28BB2B0CF8A587B2",
+  "keywordClasses": [
+    {
+      "name": "com.kms.pom.VerifyWebElement",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

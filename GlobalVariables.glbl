@@ -10,7 +10,7 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>'http://demoaut.katalon.com'</initValue>
-      <name>G_SiteURL</name>
+      <name>G_SiteURL</name> 
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>

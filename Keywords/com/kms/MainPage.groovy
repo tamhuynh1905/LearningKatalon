@@ -65,7 +65,8 @@ class MainPage {
 	@Keyword
 	static loginPageSuccessful() {
 		loginPage()
-		WebUiBuiltInKeywords.verifyElementPresent(findTestObject('objWebPIM/Main/lbl_PageHeader', [('headerName') : GlobalVariable.G_DefaultLabelHeader]), GlobalVariable.G_Timeout)
+		WebUiBuiltInKeywords.verifyElementPresent(findTestObject('objWebPIM/Main/dropdown_UserLogin'), GlobalVariable.G_Timeout)
+		//WebUiBuiltInKeywords.verifyElementPresent(findTestObject('objWebPIM/Main/lbl_PageHeader', [('headerName') : GlobalVariable.G_DefaultLabelHeader]), GlobalVariable.G_Timeout)
 	}
 
 	/**

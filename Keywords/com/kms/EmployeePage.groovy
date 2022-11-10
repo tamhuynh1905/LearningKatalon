@@ -68,11 +68,15 @@ class EmployeePage {
 		String firstName = 'Tam ' + formattedDate + todaysDate.getTime()
 		String middleName = 'Minh'
 		String lastName = 'Huynh'
-		
-		String[] fullName = [firstName, middleName, lastName]
+
+		String[] fullName = [
+			firstName,
+			middleName,
+			lastName
+		]
 
 		//File csvFile = new File(GlobalVariable.G_Path)
-		String record = "'${firstName}', '${middleName}', '${lastName}','','','','','','','','','','','','','','','','','','',''"
+		String record = "${firstName}, ${middleName}, ${lastName},,,,,,,,,,,,,,,,,,,"
 		csvFile.append("\n")
 		csvFile.append(record)
 
@@ -83,11 +87,9 @@ class EmployeePage {
 	 * insertToCSVFile
 	 */
 	@Keyword
-	static boolean browseFile() {
-		//	  WebElement we = WebUiBuiltInKeywords.findWebElement(findTestObject('objWebPIM/Employee/btn_Browse'))
-		//	  we.click()
-		WebElement we2 = WebUiBuiltInKeywords.findWebElement(findTestObject('Object Repository/objWebPIM/Employee/input_File'))
-		we2.sendKeys(GlobalVariable.G_Path)
+	static boolean browseFile(String filePath) {
+		WebElement we2 = WebUiBuiltInKeywords.findWebElement(findTestObject('objWebPIM/Employee/input_File'))
+		we2.sendKeys(filePath)
 
 		WebUiBuiltInKeywords.verifyElementText(findTestObject('objWebPIM/Employee/lbl_SelectedBrowseFile'), GlobalVariable.G_FileName)
 	}
@@ -117,65 +119,65 @@ class EmployeePage {
 		return isPresent
 		//return strLast + ' - ' + strLastName.replaceAll("'", "")
 	}
-		
-		/**
-		 * verifyNewEmployee
-		 */
-		@Keyword
-		static boolean deleteNewEmployee (String[] strFullName) {
-			boolean isPresent = verifyNewEmployee(strFullName)
-			boolean isDeleted = false
-			if(isPresent) {
-				WebUiBuiltInKeywords.click(findTestObject('objWebPIM/Main/tbl_FilteredCellButton', [('rowNumber') : 1, ('cellNumber') : 9]))
-				
-				WebUiBuiltInKeywords.click(findTestObject('Object Repository/objWebPIM/Main/btn_Delete'))
-				
-				String strMessage = 'Successfully Deleted'
-				WebUiBuiltInKeywords.verifyElementText(findTestObject('objWebPIM/Leave/toast_Message'), strMessage)
-				isDeleted = true
-			}
-			return isDeleted
-		}
 
-		/**
-		 * Refresh browser
-		 */
-		@Keyword
-		def refreshBrowser() {
-			KeywordUtil.logInfo("Refreshing")
-			WebDriver webDriver = DriverFactory.getWebDriver()
-			webDriver.navigate().refresh()
-			KeywordUtil.markPassed("Refresh successfully")
-		}
+	/**
+	 * verifyNewEmployee
+	 */
+	@Keyword
+	static boolean deleteNewEmployee (String[] strFullName) {
+		boolean isPresent = verifyNewEmployee(strFullName)
+		boolean isDeleted = false
+		if(isPresent) {
+			WebUiBuiltInKeywords.click(findTestObject('objWebPIM/Main/tbl_FilteredCellButton', [('rowNumber') : 1, ('cellNumber') : 9]))
 
-		/**
-		 * Click element
-		 * @param to Katalon test object
-		 */
-		@Keyword
-		def clickElement(TestObject to) {
-			try {
-				WebElement element = WebUiBuiltInKeywords.findWebElement(to);
-				KeywordUtil.logInfo("Clicking element")
-				element.click()
-				KeywordUtil.markPassed("Element has been clicked")
-			} catch (WebElementNotFoundException e) {
-				KeywordUtil.markFailed("Element not found")
-			} catch (Exception e) {
-				KeywordUtil.markFailed("Fail to click on element")
-			}
-		}
+			WebUiBuiltInKeywords.click(findTestObject('Object Repository/objWebPIM/Main/btn_Delete'))
 
-		/**
-		 * Get all rows of HTML table
-		 * @param table Katalon test object represent for HTML table
-		 * @param outerTagName outer tag name of TR tag, usually is TBODY
-		 * @return All rows inside HTML table
-		 */
-		@Keyword
-		def List<WebElement> getHtmlTableRows(TestObject table, String outerTagName) {
-			WebElement mailList = WebUiBuiltInKeywords.findWebElement(table)
-			List<WebElement> selectedRows = mailList.findElements(By.xpath("./" + outerTagName + "/tr"))
-			return selectedRows
+			String strMessage = 'Successfully Deleted'
+			WebUiBuiltInKeywords.verifyElementText(findTestObject('objWebPIM/Leave/toast_Message'), strMessage)
+			isDeleted = true
 		}
+		return isDeleted
+	}
+
+	/**
+	 * Refresh browser
+	 */
+	@Keyword
+	def refreshBrowser() {
+		KeywordUtil.logInfo("Refreshing")
+		WebDriver webDriver = DriverFactory.getWebDriver()
+		webDriver.navigate().refresh()
+		KeywordUtil.markPassed("Refresh successfully")
+	}
+
+	/**
+	 * Click element
+	 * @param to Katalon test object
+	 */
+	@Keyword
+	def clickElement(TestObject to) {
+		try {
+			WebElement element = WebUiBuiltInKeywords.findWebElement(to);
+			KeywordUtil.logInfo("Clicking element")
+			element.click()
+			KeywordUtil.markPassed("Element has been clicked")
+		} catch (WebElementNotFoundException e) {
+			KeywordUtil.markFailed("Element not found")
+		} catch (Exception e) {
+			KeywordUtil.markFailed("Fail to click on element")
+		}
+	}
+
+	/**
+	 * Get all rows of HTML table
+	 * @param table Katalon test object represent for HTML table
+	 * @param outerTagName outer tag name of TR tag, usually is TBODY
+	 * @return All rows inside HTML table
+	 */
+	@Keyword
+	def List<WebElement> getHtmlTableRows(TestObject table, String outerTagName) {
+		WebElement mailList = WebUiBuiltInKeywords.findWebElement(table)
+		List<WebElement> selectedRows = mailList.findElements(By.xpath("./" + outerTagName + "/tr"))
+		return selectedRows
+	}
 }

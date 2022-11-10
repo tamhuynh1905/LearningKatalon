@@ -1,5 +1,5 @@
 {
-  "keywordFileContentHash": "9293E69CA55E3E23C3D94E28E5E6318C",
+  "keywordFileContentHash": "306298A3D3072225FD4DA1C2D6F957DE",
   "keywordClasses": [
     {
       "name": "com.kms.EmployeePage",
@@ -33,8 +33,7 @@
                 "errorOnParsing": false
               }
             }
-          ],
-          "javadoc": "/**\n\t * accessSubPageMenuItem\n\t */"
+          ]
         },
         {
           "name": "accessSubPageMenuItemSuccessful",
@@ -65,8 +64,7 @@
                 "errorOnParsing": false
               }
             }
-          ],
-          "javadoc": "/**\n\t * accessSubPageMenuItemSuccessful\n\t */"
+          ]
         },
         {
           "name": "insertToCSVFile",
@@ -84,13 +82,25 @@
                 "errorOnParsing": false
               }
             }
-          ],
-          "javadoc": "/**\n\t * insertToCSVFile\n\t */"
+          ]
         },
         {
           "name": "browseFile",
-          "parameters": [],
-          "javadoc": "/**\n\t * insertToCSVFile\n\t */"
+          "parameters": [
+            {
+              "name": "filePath",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ]
         },
         {
           "name": "verifyNewEmployee",
@@ -117,8 +127,7 @@
                 "errorOnParsing": false
               }
             }
-          ],
-          "javadoc": "/**\n\t * verifyNewEmployee\n\t */"
+          ]
         },
         {
           "name": "deleteNewEmployee",
@@ -145,13 +154,11 @@
                 "errorOnParsing": false
               }
             }
-          ],
-          "javadoc": "/**\n\t\t * verifyNewEmployee\n\t\t */"
+          ]
         },
         {
           "name": "refreshBrowser",
-          "parameters": [],
-          "javadoc": "/**\n\t\t * Refresh browser\n\t\t */"
+          "parameters": []
         },
         {
           "name": "clickElement",
@@ -169,8 +176,7 @@
                 "errorOnParsing": false
               }
             }
-          ],
-          "javadoc": "/**\n\t\t * Click element\n\t\t * @param to Katalon test object\n\t\t */"
+          ]
         },
         {
           "name": "getHtmlTableRows",
@@ -201,11 +207,10 @@
                 "errorOnParsing": false
               }
             }
-          ],
-          "javadoc": "/**\n\t\t * Get all rows of HTML table\n\t\t * @param table Katalon test object represent for HTML table\n\t\t * @param outerTagName outer tag name of TR tag, usually is TBODY\n\t\t * @return All rows inside HTML table\n\t\t */"
+          ]
         }
       ]
     }
   ],
-  "javadocParsed": true
+  "javadocParsed": false
 }
